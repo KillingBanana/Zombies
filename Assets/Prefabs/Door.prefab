@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114445510835651534}
   m_Layer: 11
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Hideable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,11 +40,11 @@ Transform:
   m_GameObject: {fileID: 1827688706406560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3, y: 0.5, z: 7.5}
-  m_LocalScale: {x: 2, y: 1, z: 0.7}
+  m_LocalScale: {x: 2, y: 1, z: 0.70000046}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!23 &23108335282420910
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -54,6 +54,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -107,8 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ce0ee794d97374882d480962a5729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opaqueMaterial: {fileID: 2100000, guid: babd6659046013b44bcec8ef5736e71d, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 0a77d5120738992428424e501347b0e3, type: 2}
+  hideablesToHide: []
   hidden: 0
-  transparent: 0
 --- !u!114 &114445510835651534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c078b906a4f089249a603633d8305700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPosition: {x: 1.01, y: 0.49, z: 7.5}
+  speed: 0.5
 --- !u!208 &208674267877342692
 NavMeshObstacle:
   m_ObjectHideFlags: 1
